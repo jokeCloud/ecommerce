@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'produto',
     'pedido',
     'perfil',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -167,3 +168,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+
+
+# crispy_forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
