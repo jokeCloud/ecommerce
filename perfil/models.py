@@ -8,7 +8,8 @@ from utils.validacpf import valida_cpf
 
 
 class Perfil(models.Model):
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(
+        User, on_delete=models.CASCADE, verbose_name='Usuário')
     idade = models.PositiveIntegerField()
     data_nascimento = models.DateField()
     cpf = models.CharField(max_length=11)
@@ -53,7 +54,7 @@ class Perfil(models.Model):
     )
 
     def __str__(self):
-        return self.usuario
+        return f'{self.usuario}'
 
     def clean(self):
         error_messages = {}
