@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views import View
@@ -16,6 +15,7 @@ class ListaProdutos(ListView):
     template_name = 'produto/lista.html'
     context_object_name = 'produtos'
     paginate_by = 10
+    ordering = ['-id']
 
 
 class DetalheProduto(DetailView):
